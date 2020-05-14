@@ -8,7 +8,7 @@ A flutter widget to control volume in each Android & iOS native volume.
 
 ## How to use :
 
-Just add VolumeSlider() Widget anywhere you want to control volume. Works Properly on Android and iOS.
+Just add FlutterVolumeSlider() Widget anywhere you want to control volume. Works Properly on Android and iOS.
 
 ```
 ...
