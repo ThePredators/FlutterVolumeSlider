@@ -9,7 +9,7 @@ class FlutterVolumeSlider extends StatefulWidget {
   final Color sliderInActiveColor;
 
   FlutterVolumeSlider(
-      {this.sliderActiveColor, this.sliderInActiveColor, this.display});
+      {this.sliderActiveColor, this.sliderInActiveColor, @required this.display});
 
   @override
   _FlutterVolumeSliderState createState() => _FlutterVolumeSliderState();
