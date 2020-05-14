@@ -1,0 +1,27 @@
+name: flutter_volume_slider
+description: A flutter widget to control volume in each Android & iOS.
+version: 1.0.0
+
+homepage: FlutterVolume
+
+environment:
+  sdk: ">=2.7.0 <3.0.0"
+  flutter: ">=1.10.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  provider: ^4.0.5
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  plugin:
+    platforms:
+      android:
+        package: fr.freekit.FlutterVolume
+        pluginClass: FlutterVolumePlugin
+      ios:
+        pluginClass: FlutterVolumePlugin
