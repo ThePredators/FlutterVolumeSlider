@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>FlutterVolume</name>
-	<comment>Project FlutterVolume created by Buildship.</comment>
+	<name>FlutterVolumeSlider</name>
+	<comment>Project FlutterVolumeSlider created by Buildship.</comment>
 	<projects>
 	</projects>
 	<buildSpec>

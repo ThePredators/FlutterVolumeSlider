@@ -1,0 +1,22 @@
+name: flutter_volume_slider_example
+description: Flutter volume slider sample App
+publish_to: 'none' 
+
+environment:
+  sdk: ">=2.7.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  flutter_volume_slider:
+    path: ../
+
+  cupertino_icons: ^0.1.3
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true

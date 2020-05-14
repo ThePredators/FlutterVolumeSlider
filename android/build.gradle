@@ -1,4 +1,4 @@
-group 'fr.freekit.FlutterVolume'
+group 'fr.freekit.FlutterVolumeSlider'
 version '1.0-SNAPSHOT'
 
 buildscript {

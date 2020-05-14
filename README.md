@@ -1,4 +1,6 @@
-# FlutterVolume
+# FlutterVolumeSlider
+
+![](https://img.shields.io/badge/version-1.0.0-green.svg) 
 
 A flutter widget to control volume in each Android & iOS.
 
@@ -17,9 +19,9 @@ Just add VolumeSlider() Widget anywhere you want to control volume. Works Proper
           title: const Text('Plugin example app'),
         ),
         body: Center(
-          child: VolumeSlider(
-            sliderActive: Colors.blue, // optional
-            sliderInActive: Colors.grey, //optional
+          child: FlutterVolumeSlider(
+            sliderActiveColor: Colors.blue,
+            sliderInActiveColor: Colors.grey,
           ),
         ),
       ),
