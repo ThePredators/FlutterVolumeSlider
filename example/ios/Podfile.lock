@@ -1,0 +1,22 @@
+PODS:
+  - Flutter (1.0.0)
+  - flutter_volume_slider (1.0.0):
+    - Flutter
+
+DEPENDENCIES:
+  - Flutter (from `Flutter`)
+  - flutter_volume_slider (from `.symlinks/plugins/flutter_volume_slider/ios`)
+
+EXTERNAL SOURCES:
+  Flutter:
+    :path: Flutter
+  flutter_volume_slider:
+    :path: ".symlinks/plugins/flutter_volume_slider/ios"
+
+SPEC CHECKSUMS:
+  Flutter: 0e3d915762c693b495b44d77113d4970485de6ec
+  flutter_volume_slider: 626493356983f02af6b984b596b071c90171002d
+
+PODFILE CHECKSUM: f45d293502bdcca725aca7bc62af43ad173e1292
+
+COCOAPODS: 1.9.1
