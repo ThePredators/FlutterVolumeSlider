@@ -4,7 +4,7 @@
 
 A flutter widget to control volume in each Android & iOS native volume.
 
-<img src="https://i.imgur.com/qtl727z.jpg" height="500" style="float: left;" /><img src="https://i.imgur.com/DCxykDN.jpg" height="500" style="float: left;" /><img src="https://i.imgur.com/UDjlM2Z.png" width="300" height="500" style="float: left;">
+<img src="https://i.imgur.com/qtl727z.jpg" height="500" style="float: left;" /> <img src="https://i.imgur.com/DCxykDN.jpg" height="500" style="float: left;" /> <img src="https://i.imgur.com/UDjlM2Z.png" width="300" height="500" style="float: left;">
 
 ## How to use :
 
