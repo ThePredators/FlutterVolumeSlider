@@ -1,7 +1,6 @@
 # FlutterVolumeSlider
 
 [![pub package](https://img.shields.io/pub/v/flutter_volume_slider.svg)](https://pub.dev/packages/flutter_volume_slider)
-![](https://img.shields.io/badge/version-1.0.0-green.svg) 
 
 A flutter widget to control volume in each Android & iOS.
 
