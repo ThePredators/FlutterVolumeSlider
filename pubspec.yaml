@@ -1,6 +1,6 @@
 name: flutter_volume_slider
-description: A flutter widget to control volume in each Android & iOS natively. Just add the dependency and call FlutterVolumeSlider() widget where you want. In Next version i will add the ability to switch orientation.
-version: 1.0.3
+description: A flutter widget to control volume in each Android & iOS natively. Just add the dependency and call FlutterVolumeSlider() widget where you want.
+version: 1.0.4
 homepage: https://github.com/ThePredators/FlutterVolumeSlider
 
 environment:

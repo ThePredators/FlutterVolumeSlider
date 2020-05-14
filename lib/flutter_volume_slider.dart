@@ -4,21 +4,16 @@ import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
 
 class FlutterVolumeSlider extends StatefulWidget {
-
   final Color sliderActiveColor;
   final Color sliderInActiveColor;
 
-  FlutterVolumeSlider({
-    this.sliderActiveColor,
-    this.sliderInActiveColor
-  });
+  FlutterVolumeSlider({this.sliderActiveColor, this.sliderInActiveColor});
 
   @override
   _FlutterVolumeSliderState createState() => _FlutterVolumeSliderState();
 }
 
 class _FlutterVolumeSliderState extends State<FlutterVolumeSlider> {
-
   double initVal = .1;
   MethodChannel _channel = MethodChannel('freekit.fr/volume');
 
@@ -54,8 +49,10 @@ class _FlutterVolumeSliderState extends State<FlutterVolumeSlider> {
   Widget build(BuildContext context) {
     return MultiProvider(
       providers: [
-        FutureProvider<MaxVolume>(create: (_) async => getMaxVolume(), initialData: MaxVolume(1.0)),
-        FutureProvider<MinVolume>(create: (_) async => getMinVolume(), initialData: MinVolume(0.0)),
+        FutureProvider<MaxVolume>(
+            create: (_) async => getMaxVolume(), initialData: MaxVolume(1.0)),
+        FutureProvider<MinVolume>(
+            create: (_) async => getMinVolume(), initialData: MinVolume(0.0)),
       ],
       child: Consumer2<MaxVolume, MinVolume>(
           builder: (context, maxVol, minVol, child) {
@@ -68,8 +65,12 @@ class _FlutterVolumeSliderState extends State<FlutterVolumeSlider> {
               color: Colors.black,
             ),
             Slider(
-              activeColor: widget.sliderActiveColor != null ? widget.sliderActiveColor : Colors.black,
-              inactiveColor: widget.sliderInActiveColor != null ? widget.sliderInActiveColor : Colors.grey,
+              activeColor: widget.sliderActiveColor != null
+                  ? widget.sliderActiveColor
+                  : Colors.black,
+              inactiveColor: widget.sliderInActiveColor != null
+                  ? widget.sliderInActiveColor
+                  : Colors.grey,
               value: initVal,
               max: maxVol.value,
               min: minVol.value,
