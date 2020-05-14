@@ -28,7 +28,7 @@ class _FlutterVolumeSliderState extends State<FlutterVolumeSlider> {
         'volume': volume,
       });
     } on PlatformException catch (e) {
-      throw 'Unable to change volume ${volume}: ${e.message}';
+      throw 'Unable to change volume : ${e.message}';
     }
   }
 
@@ -37,7 +37,7 @@ class _FlutterVolumeSliderState extends State<FlutterVolumeSlider> {
       var val = await _channel.invokeMethod('getMaxVolume');
       return MaxVolume(val.toDouble());
     } on PlatformException catch (e) {
-      throw 'Unable to get max volume ';
+      throw 'Unable to get max volume : ${e.message}';
     }
   }
 
@@ -46,7 +46,7 @@ class _FlutterVolumeSliderState extends State<FlutterVolumeSlider> {
       var val = await _channel.invokeMethod('getMinVolume');
       return MinVolume(val.toDouble());
     } on PlatformException catch (e) {
-      throw 'Unable to get max volume ';
+      throw 'Unable to get max volume e : ${e.message}';
     }
   }
 
