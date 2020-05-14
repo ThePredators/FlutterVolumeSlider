@@ -1,3 +1,7 @@
+## 1.0.6
+
+* Minor fix display reqsuired.
+
 ## 1.0.5
 
 * Adding ability to change Orientation.
