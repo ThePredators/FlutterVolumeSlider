@@ -1,3 +1,7 @@
+## 1.0.5
+
+* Adding ability to change Orientation.
+
 ## 1.0.4
 
 * Fixing Ano.

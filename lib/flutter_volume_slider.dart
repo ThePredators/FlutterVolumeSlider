@@ -4,10 +4,12 @@ import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
 
 class FlutterVolumeSlider extends StatefulWidget {
+  final Display display;
   final Color sliderActiveColor;
   final Color sliderInActiveColor;
 
-  FlutterVolumeSlider({this.sliderActiveColor, this.sliderInActiveColor});
+  FlutterVolumeSlider(
+      {this.sliderActiveColor, this.sliderInActiveColor, this.display});
 
   @override
   _FlutterVolumeSliderState createState() => _FlutterVolumeSliderState();
@@ -45,6 +47,89 @@ class _FlutterVolumeSliderState extends State<FlutterVolumeSlider> {
     }
   }
 
+  _buildVerticalContainer(maxVol, minVol) {
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: <Widget>[
+        Icon(
+          CupertinoIcons.volume_mute,
+          size: 25.0,
+          color: Colors.black,
+        ),
+        Container(
+          height: 175,
+          child: new Transform(
+            alignment: FractionalOffset.center,
+            // Rotate sliders by 90 degrees
+            transform: new Matrix4.identity()..rotateZ(90 * 3.1415927 / 180),
+            child: new Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Container(
+                  width: 175,
+                  child: Slider(
+                    activeColor: widget.sliderActiveColor != null
+                        ? widget.sliderActiveColor
+                        : Colors.black,
+                    inactiveColor: widget.sliderInActiveColor != null
+                        ? widget.sliderInActiveColor
+                        : Colors.grey,
+                    value: initVal,
+                    divisions: 50,
+                    max: maxVol.value,
+                    min: minVol.value,
+                    onChanged: (value) {
+                      changeVolume(value);
+                      setState(() => initVal = value);
+                    },
+                  ),
+                )
+              ],
+            ),
+          ),
+        ),
+        Icon(
+          CupertinoIcons.volume_up,
+          size: 25.0,
+          color: Colors.black,
+        ),
+      ],
+    );
+  }
+
+  _buildHorizontalContainer(maxVol, minVol) {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: <Widget>[
+        Icon(
+          CupertinoIcons.volume_mute,
+          size: 25.0,
+          color: Colors.black,
+        ),
+        Slider(
+          activeColor: widget.sliderActiveColor != null
+              ? widget.sliderActiveColor
+              : Colors.black,
+          inactiveColor: widget.sliderInActiveColor != null
+              ? widget.sliderInActiveColor
+              : Colors.grey,
+          value: initVal,
+          max: maxVol.value,
+          min: minVol.value,
+          onChanged: (value) {
+            changeVolume(value);
+            setState(() => initVal = value);
+          },
+        ),
+        Icon(
+          CupertinoIcons.volume_up,
+          size: 25.0,
+          color: Colors.black,
+        ),
+      ],
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return MultiProvider(
@@ -56,40 +141,17 @@ class _FlutterVolumeSliderState extends State<FlutterVolumeSlider> {
       ],
       child: Consumer2<MaxVolume, MinVolume>(
           builder: (context, maxVol, minVol, child) {
-        return Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Icon(
-              CupertinoIcons.volume_mute,
-              size: 25.0,
-              color: Colors.black,
-            ),
-            Slider(
-              activeColor: widget.sliderActiveColor != null
-                  ? widget.sliderActiveColor
-                  : Colors.black,
-              inactiveColor: widget.sliderInActiveColor != null
-                  ? widget.sliderInActiveColor
-                  : Colors.grey,
-              value: initVal,
-              max: maxVol.value,
-              min: minVol.value,
-              onChanged: (value) {
-                changeVolume(value);
-                setState(() => initVal = value);
-              },
-            ),
-            Icon(
-              CupertinoIcons.volume_up,
-              size: 25.0,
-              color: Colors.black,
-            ),
-          ],
-        );
+        if (widget.display == Display.HORIZONTAL) {
+          return _buildHorizontalContainer(maxVol, minVol);
+        } else {
+          return _buildVerticalContainer(maxVol, minVol);
+        }
       }),
     );
   }
 }
+
+enum Display { HORIZONTAL, VERTICAL }
 
 class MinVolume {
   double value;

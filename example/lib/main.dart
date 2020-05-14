@@ -24,10 +24,23 @@ class _MyAppState extends State<MyApp> {
         appBar: AppBar(
           title: const Text('Plugin example app'),
         ),
-        body: Center(
-          child: FlutterVolumeSlider(
-            sliderActiveColor: Colors.blue,
-            sliderInActiveColor: Colors.grey,
+        body: Container(
+          child: Padding(
+            padding: EdgeInsets.all(10.0),
+            child: ListView(
+              children: <Widget>[
+                FlutterVolumeSlider(
+                  display: Display.HORIZONTAL,
+                  sliderActiveColor: Colors.blue,
+                  sliderInActiveColor: Colors.grey,
+                ),
+                FlutterVolumeSlider(
+                  display: Display.VERTICAL,
+                  sliderActiveColor: Colors.blue,
+                  sliderInActiveColor: Colors.grey,
+                ),
+              ],
+            ),
           ),
         ),
       ),
