@@ -2,7 +2,9 @@
 
 [![pub package](https://img.shields.io/pub/v/flutter_volume_slider.svg)](https://pub.dev/packages/flutter_volume_slider)
 
-A flutter widget to control volume in each Android & iOS.
+A flutter widget to control volume in each Android & iOS native volume.
+
+<img src="sample.jpg" style="zoom:20%;float: left;" />
 
 ## How to use :
 
