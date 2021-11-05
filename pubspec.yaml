@@ -4,13 +4,13 @@ version: 1.0.6
 homepage: https://github.com/ThePredators/FlutterVolumeSlider
 
 environment:
-  sdk: ">=2.7.0 <3.0.0"
+  sdk: '>=2.12.0 <3.0.0'
   flutter: ">=1.10.0"
 
 dependencies:
   flutter:
     sdk: flutter
-  provider: ^4.0.5
+  provider: ^6.0.1
 
 dev_dependencies:
   flutter_test:
