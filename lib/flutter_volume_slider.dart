@@ -5,11 +5,11 @@ import 'package:provider/provider.dart';
 
 class FlutterVolumeSlider extends StatefulWidget {
   final Display display;
-  final Color sliderActiveColor;
-  final Color sliderInActiveColor;
+  final Color? sliderActiveColor;
+  final Color? sliderInActiveColor;
 
   FlutterVolumeSlider(
-      {this.sliderActiveColor, this.sliderInActiveColor, @required this.display});
+      {this.sliderActiveColor, this.sliderInActiveColor, required this.display});
 
   @override
   _FlutterVolumeSliderState createState() => _FlutterVolumeSliderState();
@@ -154,11 +154,11 @@ class _FlutterVolumeSliderState extends State<FlutterVolumeSlider> {
 enum Display { HORIZONTAL, VERTICAL }
 
 class MinVolume {
-  double value;
+  double? value;
   MinVolume(this.value);
 }
 
 class MaxVolume {
-  double value;
+  double? value;
   MaxVolume(this.value);
 }
